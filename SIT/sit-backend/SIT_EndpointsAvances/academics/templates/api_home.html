@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIT API - Sistema de Intervención Temprana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Extra para smooth scroll y detalles */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Botones mejorados */
+    .btn-primary {
+      @apply bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition transform hover:bg-blue-700 hover:shadow-lg hover:-translate-y-1 cursor-pointer inline-block;
+    }
+    .btn-primary:focus {
+      @apply outline-none ring-4 ring-blue-300;
+    }
+    /* Footer con fondo oscuro */
+    footer {
+      background-color: #1e293b;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-md sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-6">
+      <div class="flex items-center space-x-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0-3 2.7-7 6-7s6 4 6 7-2.7 7-6 7-6-4-6-7z" />
+          <circle cx="12" cy="11" r="2" />
+        </svg>
+        <h1 class="text-2xl font-bold text-blue-700">SIT API</h1>
+      </div>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#about" class="text-blue-700 hover:text-blue-900 font-semibold transition">Qué es SIT</a>
+        <a href="#features" class="text-blue-700 hover:text-blue-900 font-semibold transition">Funcionalidades</a>
+        <a href="#start" class="text-blue-700 hover:text-blue-900 font-semibold transition">Cómo Empezar</a>
+        <a href="#contact" class="text-blue-700 hover:text-blue-900 font-semibold transition">Contacto</a>
+        <a href="/swagger/" class="btn-primary">Probar API</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / INTRO -->
+  <section class="flex-grow flex flex-col justify-center items-center text-center px-6 py-20 max-w-4xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-6 leading-tight">
+      Sistema de Intervención Temprana <br class="hidden md:block" /> (SIT) - API RESTful
+    </h2>
+    <p class="text-blue-700 text-lg max-w-3xl mb-10">
+      Plataforma especializada para la gestión integral de programas de intervención temprana, facilitando la administración de cursos, estudiantes, docentes y tareas con autenticación segura.
+    </p>
+    <a href="/swagger/" class="btn-primary text-lg">
+      Explorar Documentación & Probar API
+    </a>
+  </section>
+
+  <!-- SECCIÓN QUÉ ES SIT -->
+  <section id="about" class="bg-white py-16 px-6 shadow-inner">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-blue-800 mb-6">¿Qué es el Sistema de Intervención Temprana?</h3>
+      <p class="text-blue-700 max-w-3xl mx-auto text-lg leading-relaxed">
+        SIT es un sistema diseñado para ayudar a profesionales y centros educativos a gestionar de forma eficaz los programas de intervención temprana. Con una API robusta y segura, permite controlar información de cursos, asignación de docentes, matrícula de estudiantes y seguimiento de tareas, todo accesible vía servicios REST.
+      </p>
+    </div>
+  </section>
+
+  <!-- FUNCIONALIDADES -->
+  <section id="features" class="py-16 px-6 max-w-7xl mx-auto">
+    <h3 class="text-3xl font-bold text-blue-900 mb-12 text-center">Funcionalidades principales</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-blue-800">
+      <div class="space-y-4 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-14 w-14 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linejoin="round" stroke-linecap="round" d="M8 9l3 3-3 3" />
+          <path stroke-linejoin="round" stroke-linecap="round" d="M13 15h6" />
+          <path stroke-linejoin="round" stroke-linecap="round" d="M12 5v14" />
+        </svg>
+        <h4 class="text-xl font-semibold">Gestión de Cursos</h4>
+        <p class="text-sm leading-relaxed">Crear, editar y listar cursos de intervención con fechas y responsables asignados.</p>
+      </div>
+      <div class="space-y-4 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-14 w-14 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linejoin="round" stroke-linecap="round" d="M5 13l4 4L19 7" />
+        </svg>
+        <h4 class="text-xl font-semibold">Manejo de Estudiantes</h4>
+        <p class="text-sm leading-relaxed">Registro seguro y seguimiento individual de estudiantes activos en programas.</p>
+      </div>
+      <div class="space-y-4 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-14 w-14 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linejoin="round" stroke-linecap="round" d="M8 9l3 3-3 3" />
+          <path stroke-linejoin="round" stroke-linecap="round" d="M13 15h6" />
+          <path stroke-linejoin="round" stroke-linecap="round" d="M12 5v14" />
+        </svg>
+        <h4 class="text-xl font-semibold">Autenticación Segura</h4>
+        <p class="text-sm leading-relaxed">Sistema de login y logout basado en tokens JWT para máxima seguridad.</p>
+      </div>
+      <div class="space-y-4 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-14 w-14 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linejoin="round" stroke-linecap="round" d="M9 12h6" />
+          <path stroke-linejoin="round" stroke-linecap="round" d="M12 9v6" />
+        </svg>
+        <h4 class="text-xl font-semibold">Gestión de Tareas</h4>
+        <p class="text-sm leading-relaxed">Creación, edición y seguimiento de tareas asignadas a estudiantes y docentes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO EMPEZAR -->
+  <section id="start" class="bg-white py-16 px-6 shadow-inner">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-blue-800 mb-6">¿Cómo empezar a usar la API?</h3>
+      <ol class="list-decimal list-inside text-blue-700 text-left max-w-xl mx-auto space-y-4 text-lg">
+        <li>Obtén tu token de autenticación registrándote o con tu cuenta asignada.</li>
+        <li>Usa el endpoint base <code class="bg-gray-200 rounded px-1 py-0.5 font-mono">/api/</code> para acceder a los recursos.</li>
+        <li>Consulta la documentación y prueba los endpoints en nuestra interfaz Swagger.</li>
+        <li>Incluye el token JWT en el encabezado <code class="bg-gray-200 rounded px-1 py-0.5 font-mono">Authorization: Bearer &lt;token&gt;</code> para las peticiones protegidas.</li>
+      </ol>
+      <a href="/swagger/" class="btn-primary mt-8 inline-block">Ir a Swagger</a>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact" class="py-16 px-6 max-w-4xl mx-auto text-center text-blue-900">
+    <h3 class="text-3xl font-bold mb-6">Contacto</h3>
+    <p class="mb-6">¿Tienes dudas o necesitas soporte? Escríbenos a:</p>
+    <a href="mailto:soporte@sitapi.com" class="text-blue-600 hover:underline font-semibold">soporte@sitapi.com</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-gray-400 py-6 text-center text-sm select-none">
+    &copy; 2025 SIT API - Sistema de Intervención Temprana. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
